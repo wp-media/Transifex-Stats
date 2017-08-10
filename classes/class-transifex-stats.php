@@ -155,29 +155,28 @@ class Codepress_Transifex_Stats {
 		$languages = apply_filters( 'cpti_transifex_stats', $languages, $project );
 
 		if ( $languages ) :
-		?>
 
-		<?php if ( $project_title = apply_filters( 'cpti_project_title', $project->name ) ) : ?>
+			$project_title = apply_filters( 'cpti_project_title', $project->name );
+
+			if ( $project_title = apply_filters( 'cpti_display_project_title', false ) ) : ?>
+
 		<div class="transifex-title"><?php echo apply_filters( 'the_title', $project_title ); ?></div>
-		<?php endif; ?>
-		<ul>
+			<?php endif; ?>
+		<ul class="transifex-stats-list">
 			<?php
 			foreach ( $languages as $language_code => $resource ) :
 				$language = $this->get_language( $language_code );
 			?>
-			<li class="clearfix">
-				<div class="language_name">
+			<li class="transifex-stats-list__item">
+				<div class="transifex-stats-list__item--label">
 					<?php echo $language->name; ?>
 				</div>
-				<div class="statbar">
-					<div class="graph_resource">
-						<div class="translated_comp" style="width:<?php echo $resource->completed; ?>;"></div>
+				<div class="transifex-stats-list__item--statbar">
+					<div class="transifex-stats-list__item--graph">
+						<div class="transifex-stats-list__item--graph-progress" style="width:<?php echo $resource->completed; ?>;"></div>
 					</div>
-					<div class="stats_string_resource">
+					<div class="transifex-stats-list__item--completed">
 						<?php echo $resource->completed; ?>
-					</div>
-					<div class="go_translate">
-						<a target="_blank" href="https://www.transifex.com/projects/p/<?php echo $this->project_slug; ?>/translate/#<?php echo $language_code; ?>"><?php _e( 'Translate', 'transifex-stats' ); ?></a>
 					</div>
 				</div>
 			</li>

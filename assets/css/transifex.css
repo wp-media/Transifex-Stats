@@ -2,124 +2,67 @@
  * Transifex Stats WordPress plugin
  * ----------------------------------------------------------------------------
  */
-
-/**
- * Container
- * ----------------------------------------------------------------------------
- */
 .transifex-stats-contributors.loading,
 .transifex-stats.loading {
 	background: transparent url('../images/loading.gif') no-repeat 50% 50%;
 	padding: 20px;
 }
-.transifex-stats-contributors div.transifex-title,
-.transifex-stats div.transifex-title {
-	margin-bottom: 10px;
-	font-weight: bold;
-	font-size: 1em;
-}
-.transifex-stats ul {
+.transifex-stats-list {
 	list-style: none !important;
 	margin-left: 0;
 	margin-right: 0;
 	padding-left: 0;
 }
-.transifex-stats ul li {
-	margin: 0;
-	line-height: 12px;
-	height: auto;
-}
-.transifex-stats ul li .language_name {
-	float: left;
-	width: 30%;
-	padding-right: 8px;
-	margin: 10px 0 0 0;
-}
-.transifex-stats ul li .statbar {
+.transifex-stats-list__item {
+	line-height: 1.5;
+	list-style: none !important;
+	margin-bottom: .5em;
 	overflow: hidden;
-	padding-right: 160px;
-	margin: 10px 0 0 0;
+	padding: 0;
+}
+.transifex-stats-list__item:before {
+	display: none !important;
+	content: '';
+}
+.transifex-stats-list__item--label {
+	float: left;
+	padding-right: 8px;
+	width: 30%;
+}
+.transifex-stats-list__item--statbar {
+	overflow: hidden;
+	padding-right: 5em;
 	position: relative;
 }
-.transifex-stats ul li .statbar div.graph_resource {
-	width: 100%;
-	position: relative;
-	z-index: 1;
-	height: 12px;
+.transifex-stats-list__item--graph {
+	background-color: #eee;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 1px 1px 5px #ddd;
+	-moz-box-shadow: inset 1px 1px 5px #ddd;
+	box-shadow: inset 1px 1px 5px #ddd;
+	float: left;
+	height: 1.5em;
 	margin: 0;
 	margin-right: 1px;
-	background-color: #eee;
-	-moz-box-shadow: inset 1px 1px 5px #ddd;
-	-webkit-box-shadow: inset 1px 1px 5px #ddd;
-	box-shadow: inset 1px 1px 5px #ddd;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	float: left;
+	position: relative;
+	width: 100%;
+	z-index: 1;
 }
-.transifex-stats ul li .statbar div.translated_comp {
-	position: absolute;
+.transifex-stats-list__item--graph-progress {
+	background: #3ece9d;
+	background-repeat: repeat-x;
+	border-radius: 2px;
 	height: 100%;
 	left: 0;
-	background: #a0cc7a;
-	background-repeat: repeat-x;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-}
-.transifex-stats ul li .statbar div.stats_string_resource {
 	position: absolute;
-	right: 100px;
-	text-align: right;
-	z-index: 2;
+}
+.transifex-stats-list__item--completed {
+	color: #31c190;
+	font-size: .923em;
 	padding-left: .8em;
 	padding-right: .8em;
-	font-size: .923em;
-	color: #69916a;
-	height: 12px;
-	line-height: 12px;
-	width: 40px;
-}
-.transifex-stats ul li .statbar div.go_translate {
 	position: absolute;
 	right: 0;
-	width: 100px;
-	height: 12px;
-	line-height: 12px;
-	text-align: center;
+	text-align: right;
+	z-index: 2;
 }
-.transifex-stats ul li .statbar div.go_translate a {
-	font-weight: 600;
-	font-size: .923em;
-	color: #0c58a4;
-	text-decoration: none;
-}
-
-/**
- * transifex-stats-contributors
- * ----------------------------------------------------------------------------
- */
-.transifex-stats-contributors a {
-	padding-right: 8px;
-}
-
-
-/**
- * Clearfix
- * ----------------------------------------------------------------------------
- */
-.transifex-stats .clearfix {
-  *zoom: 1;
-}
-
-.transifex-stats .clearfix:before,
-.transifex-stats .clearfix:after {
-  display: table;
-  line-height: 0;
-  content: "";
-}
-
-.transifex-stats .clearfix:after {
-  clear: both;
-}
-

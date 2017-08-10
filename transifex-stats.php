@@ -64,8 +64,8 @@ class Codepress_Transifex {
 	 */
 	static function scripts() {
 
-		wp_enqueue_style( 'cp-transifex-css', CPTI_URL . '/assets/css/transifex.css', '', CPTI_VERSION );
-		wp_enqueue_script( 'cp-transifex-js', CPTI_URL . '/assets/js/transifex.js', array('jquery'), CPTI_VERSION, true );
+		wp_enqueue_style( 'cp-transifex-css', trailingslashit( CPTI_URL ) . 'assets/css/transifex.css', '', CPTI_VERSION );
+		wp_enqueue_script( 'cp-transifex-js', trailingslashit( CPTI_URL ) . 'assets/js/transifex.js', array('jquery'), CPTI_VERSION, true );
 
 		wp_localize_script( 'cp-transifex-js', 'cpti', array(
 			'ajaxurl' 	=> admin_url('admin-ajax.php'),
