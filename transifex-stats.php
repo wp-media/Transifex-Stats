@@ -1,15 +1,15 @@
 <?php
-
 /*
-Plugin Name: 	Transifex Stats
-Version: 		1.1
-Description: 	Display transifex translation progress
-Author: 		Codepress
-Author URI: 	http://www.codepresshq.com
-Plugin URI: 	http://www.codepresshq.com/plugins
-Text Domain: 	transifex-stats
-Domain Path: 	/languages
-License:		GPLv2
+Plugin Name: Transifex Stats
+Version:     1.1.1
+Description: Display transifex translation progress
+Author:      Codepress (author), WP Media (fork)
+Author URI:  http://wp-media.me
+Plugin URI:  https://github.com/wp-media/transifex-stats
+Text Domain: transifex-stats
+Domain Path: /languages
+License:     GPLv2
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 Copyright 2011-2013  Codepress  info@codepress.nl
 
@@ -27,10 +27,10 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define( 'CPTI_VERSION', 	'1.0' );
-define( 'CPTI_SLUG', 		'transifex-stats' );
-define( 'CPTI_URL', 		plugin_dir_url( __FILE__ ) );
-define( 'CPTI_DIR', 		plugin_dir_path( __FILE__ ) );
+define( 'CPTI_VERSION', '1.1.1' );
+define( 'CPTI_SLUG',    'transifex-stats' );
+define( 'CPTI_URL',     plugin_dir_url( __FILE__ ) );
+define( 'CPTI_DIR',     plugin_dir_path( __FILE__ ) );
 
 // Dependencies
 require 'classes/class-transifex-api.php';
