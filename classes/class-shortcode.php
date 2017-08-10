@@ -17,7 +17,7 @@ class Codepress_Transifex_Stats_Shortcode {
         add_shortcode( 'transifex_stats', array( $this, 'render_shortcode_transifex_stats' ) );
 		add_shortcode( 'transifex_contributors', array( $this, 'render_shortcode_transifex_contributors' ) );
 
-        add_action( 'init', array( $this, 'add_button_to_toolbar' ) );
+        // add_action( 'init', array( $this, 'add_button_to_toolbar' ) );
         add_action( 'admin_head', array( $this, 'add_button_icon' ) );
 
 	}
