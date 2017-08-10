@@ -9,16 +9,16 @@
 }
 .transifex-stats-list {
 	list-style: none !important;
-	margin-left: 0;
-	margin-right: 0;
-	padding-left: 0;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	padding-left: 0 !important;
 }
 .transifex-stats-list__item {
 	line-height: 1.5;
 	list-style: none !important;
 	margin-bottom: .5em;
 	overflow: hidden;
-	padding: 0;
+	padding: 0 !important;
 }
 .transifex-stats-list__item:before {
 	display: none !important;
